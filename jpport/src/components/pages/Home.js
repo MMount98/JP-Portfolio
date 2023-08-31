@@ -3,6 +3,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 import { motion, AnimatePresence } from "framer-motion";
 import { PlayIcon } from "@heroicons/react/solid";
 import { XIcon } from "@heroicons/react/outline";
+import AboutMe from "./AboutMe";
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -266,6 +267,8 @@ export default function Home() {
             ))}
           </AnimatePresence>
         </div>
+        <div className="divider mx-4 md:mx-56"></div>
+        <AboutMe />
       </div>
     </>
   );
