@@ -131,10 +131,10 @@ export default function Home() {
 
   const handlePlayClick = (track) => {
     setSelectedTrack(track);
-    setPlayerVisible(true)
+    setPlayerVisible(true);
 
-    if(drawerContentRef.current) {
-        drawerContentRef.current.scrollInctoView({ behavior: "smooth"})
+    if (drawerContentRef.current) {
+      drawerContentRef.current.scrollInctoView({ behavior: "smooth" });
     }
   };
 
@@ -143,9 +143,130 @@ export default function Home() {
     setPlayerVisible(false);
   };
 
-  return(
+  return (
     <>
-    <h1>hi</h1>
+      <div className="">
+        <div className="divider mx-56"></div>
+        {isPlayerVisible && (
+          <AnimatePresence>
+            <motion.div
+              className="drawer flex w-full overflow-y-auto z-50 bg-gradient-to-r from-stone-600 via-stone-500 to-gray-950 "
+              initial={{ scaleY: 0, opacity: 0 }}
+              animate={{ scaleY: 1, opacity: 1 }}
+              exit={{ scaleY: 0, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              ref={drawerContentRef}
+              style={{ transformOrigin: "top" }}
+            >
+              {selectedTrack && (
+                <>
+                  <div className="flex items-center justify-evenly  ">
+                    <button
+                      className="absolute top-2 right-2 text-primary hover:text-white focus:outline-none"
+                      onClick={handleDrawerClose}
+                    >
+                      <XIcon className="rounded absolute h-8 w-8 right-24 top-2" />
+                    </button>
+                    <input
+                      id={selectedTrack.id}
+                      type="checkbox"
+                      className="drawer-toggle hidden"
+                      checked={isPlayerVisible}
+                      onChange={handleDrawerClose}
+                      ref={drawerContentRef}
+                    />
+                    <div className="imagePlayer ml-80 mr-40 my-10">
+                      <img
+                        className="rounded shadow-xl "
+                        src={selectedTrack.images}
+                        alt={selectedTrack.title}
+                      />
+                      <audio
+                        src={selectedTrack.preview_url}
+                        controls
+                        autoPlay
+                        controlsList="nodownload"
+                        className="m-4"
+                      />
+                    </div>
+                    <div className="aboutTrack">
+                      <ul>
+                        <h1 className="text-2xl md:text-5xl font-bold text-white">
+                          {selectedTrack.title}
+                        </h1>
+                        <div className="divider my-2 h-1"></div>
+                        <h2 className="text-xl md:text-3xl text-white">
+                          {selectedTrack.artist}
+                        </h2>
+                        <h2 className="text-xl md:text-3xl text-white">
+                          {selectedTrack.role}
+                        </h2>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                </>
+              )}
+            </motion.div>
+          </AnimatePresence>
+        )}
+        <h1 className="text-4xl md:text-5xl text-center mt-4 font-custom">
+          Recent Projects
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-4 place-content-evenly gap-4 my-1 mx-4 md:mx-14 p-4 md:p-10">
+          <AnimatePresence>
+            {tracks.map((track) => (
+              <motion.div
+                key={track.id}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  duration: 0.3,
+                  delay: 0.2 * track.id,
+                  ease: "easeOut",
+                }}
+                onMouseEnter={() => handleMouseEnter(track.id)}
+                onMouseLeave={handleMouseLeave}
+                className="relative h-full"
+              >
+                <img
+                  className="rounded w-full h-auto"
+                  src={track.images}
+                  alt={track.title}
+                />
+                {hoverd === track.id && (
+                  <div
+                    className="transition-opacity duration-300 absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center rounded"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      rigth: 0,
+                      bottom: 0,
+                    }}
+                  >
+                    <div className="text-white text-center">
+                      <h1 className="text-lg font-medium mb-2">
+                        {track.title}
+                      </h1>
+                      <h2 className="text-md mb-3 text-white">
+                        {track.artist}
+                      </h2>
+                      <p className="text-sm mb-3 text-white">{track.role}</p>
+                      <button
+                        className="bg-accent px-4 py-2 rounded-md hover:bg-secondary"
+                        onClick={() => handlePlayClick(track)}
+                      >
+                        <PlayIcon className="h-5 w-5 mr-1" />
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </div>
     </>
-  )
+  );
 }
