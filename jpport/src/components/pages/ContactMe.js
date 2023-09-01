@@ -14,10 +14,10 @@ export default function ContactMe() {
   
     emailjs
       .sendForm(
-        'service_gs8vu13',
-        'template_wgzccpc',
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        'VZpEZ4pw6NYQFJ1OE'
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (results) => {
