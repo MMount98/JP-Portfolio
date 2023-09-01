@@ -38,7 +38,7 @@ export default function NavBar() {
               <FaTwitter />
             </a>
           </div>
-          <Link to="/contact" className="btn btn-outline btn-primary lg:mr-6 ">
+          <Link to="/Contact" className="btn btn-outline btn-primary lg:mr-6 ">
             Contact Me!
           </Link>
         </div>
