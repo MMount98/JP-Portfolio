@@ -6,9 +6,9 @@ export default function NavBar() {
     <>
       <div className="navbar bg-secondary">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-5xl font-custom text-primary">
+          <Link to="/" className="btn btn-ghost normal-case text-5xl font-custom text-primary">
             Jacob Paulson
-          </a>
+          </Link>
         </div>
 
         <div className="flex-none">
