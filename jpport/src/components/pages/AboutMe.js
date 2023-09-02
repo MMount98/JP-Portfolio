@@ -15,7 +15,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <h2 className="text-7xl text-center mb-6"> About Me</h2>
+      <h3 className="text-7xl text-center mb-6 font-custom"> About Me</h3>
       <div className="grid grid-cols-2 gap-8 px-10 my-4">
         <motion.div
           ref={ref}
