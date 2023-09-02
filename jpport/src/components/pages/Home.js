@@ -113,14 +113,7 @@ export default function Home() {
       url: "https://api.spotify.com/v1/albums/7nZ2iw6SYV3XeFG2p6WSXW",
     },
   ]);
-  const logPreviewUrl = async (trackId) => {
-    try {
-      const response = await spotifyApi.getTrack(trackId);
-      console.log(response.preview_url);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  
 
   const handleMouseEnter = (id) => {
     setHovered(id);
@@ -135,7 +128,7 @@ export default function Home() {
     setPlayerVisible(true);
 
     if (drawerContentRef.current) {
-      drawerContentRef.current.scrollInctoView({ behavior: "smooth" });
+      drawerContentRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -161,9 +154,9 @@ export default function Home() {
             >
               {selectedTrack && (
                 <>
-                  <div className="flex items-center justify-evenly  ">
+                  <div className="flex items-center justify-evenly flex-col lg:flex-row lg:ml-24">
                     <button
-                      className="absolute top-2 right-2 text-primary hover:text-white focus:outline-none"
+                      className="absolute top-1 right-0.5 text-primary hover:text-white focus:outline-none"
                       onClick={handleDrawerClose}
                     >
                       <XIcon className="rounded absolute h-8 w-8 right-24 top-2" />
@@ -176,7 +169,7 @@ export default function Home() {
                       onChange={handleDrawerClose}
                       ref={drawerContentRef}
                     />
-                    <div className="imagePlayer ml-80 mr-40 my-10">
+                    <div className="imagePlayer m-14 ">
                       <img
                         className="rounded shadow-xl "
                         src={selectedTrack.images}
@@ -187,10 +180,10 @@ export default function Home() {
                         controls
                         autoPlay
                         controlsList="nodownload"
-                        className="m-4"
+                        className="my-4"
                       />
                     </div>
-                    <div className="aboutTrack">
+                    <div className="aboutTrack mb-9">
                       <ul>
                         <h1 className="text-2xl md:text-5xl font-bold text-white">
                           {selectedTrack.title}
@@ -204,7 +197,6 @@ export default function Home() {
                         </h2>
                       </ul>
                     </div>
-                    
                   </div>
                 </>
               )}
