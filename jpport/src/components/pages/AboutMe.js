@@ -16,7 +16,7 @@ export default function AboutMe() {
   return (
     <>
       <h3 className="text-7xl text-center mb-6 font-custom"> About Me</h3>
-      <div className="grid grid-cols-2 gap-8 px-10 my-4">
+      <div className="flex flex-col md:flex-row">
         <motion.div
           ref={ref}
           className="place-self-center"
@@ -28,7 +28,7 @@ export default function AboutMe() {
           <img
             src={headshot}
             alt="Music Producer Jacob Paulson"
-            className="w-4/6 shadow-xl my-5 rounded-full"
+            className="w-4/6 shadow-xl my-5 ml-16 rounded-full "
           />
         </motion.div>
 
@@ -40,7 +40,7 @@ export default function AboutMe() {
           animate={inView ? "visible" : "hidden"}
           transition={{ duration: 1 }}
         >
-          <div className="text-base space-y-4">
+          <div className="text-base m-5 md:m-0 md:mr-24">
             <p>
               Welcome to my portfolio! I'm Jacob Paulson, a passionate musician,
               producer, and mixing engineer hailing from the vibrant city of
@@ -48,6 +48,7 @@ export default function AboutMe() {
               music, dedicating my craft to creating captivating sounds that
               resonate with audiences.
             </p>
+            <br></br>
             <p>
               With a versatile skill set, I thrive in crafting mesmerizing
               melodies, producing dynamic music, and creating exciting boundary
@@ -55,6 +56,7 @@ export default function AboutMe() {
               for various genres, allowing me to explore a wide spectrum of
               styles and experiment with unique sonic landscapes.
             </p>
+            <br></br>
             <p>
               Whether I'm composing an emotive score, producing a catchy pop
               track, or engineering a powerful mix, my goal is always to evoke
@@ -63,6 +65,7 @@ export default function AboutMe() {
               constantly inspired to push the boundaries of my creativity to
               bring captivating visions to life.
             </p>
+            <br></br>
             <p>
               This portfolio showcases a selection of my most notable works,
               highlighting my ability to collaborate with artists, translate
@@ -71,12 +74,14 @@ export default function AboutMe() {
               exploration, and I approach each one with unwavering dedication
               and a meticulous attention to detail.
             </p>
+            <br></br>
             <p>
               I invite you to explore my portfolio and immerse yourself in the
               world of my music. Whether you're an artist seeking a passionate
               collaborator or someone looking to discover compelling sounds, I'm
               thrilled to connect and embark on new musical journeys together.
             </p>
+            <br></br>
             <p>
               Thank you for visiting, and I look forward to sharing my passion
               for music with you.
