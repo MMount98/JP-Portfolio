@@ -79,7 +79,7 @@ export default function ContactMe() {
                 {/* Message textarea */}
                 <div>
                   <label className="mb-2 block font-bold text-sm md:text-base">
-                    What Can I help you with?
+                    What Can I Help You With?
                   </label>
                   <textarea
                     name="message"
@@ -94,7 +94,7 @@ export default function ContactMe() {
                     <button disabled>Loading...</button>
                   ) : (
                     <button
-                      className="btn btn-outline rounded-3xl w-full"
+                      className="btn btn-outline rounded-3xl w-full bg-primary font-custom text-3xl hover:bg-warning hover:text-primary"
                       type="submit"
                     >
                       Send
