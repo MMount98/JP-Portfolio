@@ -13,7 +13,7 @@ export default function NavBar() {
     <>
       <div className="navbar bg-secondary">
         <div className="flex-1">
-          <Link to="/" className="btn btn-ghost normal-case text-4xl lg:text-5xl font-custom text-primary">
+          <Link to="/" className="btn btn-ghost normal-case text-4xl lg:text-5xl font-custom text-primary bg-gray-500">
             Jacob Paulson
           </Link>
         </div>

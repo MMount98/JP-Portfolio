@@ -171,7 +171,7 @@ export default function Home() {
                     />
                     <div className="imagePlayer m-14 ">
                       <img
-                        className="rounded shadow-xl "
+                        className="rounded shadow-lg shadow-primary "
                         src={selectedTrack.images}
                         alt={selectedTrack.title}
                       />
@@ -206,7 +206,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl text-center mt-4 font-custom">
           Recent Projects
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 place-content-evenly gap-4 my-1 mx-4 md:mx-14 p-4 md:p-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-1 mx-4 md:mx-14 p-4 md:p-10">
           <AnimatePresence>
             {tracks.map((track) => (
               <motion.div
@@ -223,7 +223,7 @@ export default function Home() {
                 className="relative h-full"
               >
                 <img
-                  className="rounded w-full h-auto"
+                  className="rounded w-full h-auto border-2 border-success shadow-2xl"
                   src={track.images}
                   alt={track.title}
                 />
