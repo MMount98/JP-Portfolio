@@ -133,6 +133,7 @@ export default function Home() {
   };
 
   const handleDrawerClose = () => {
+    console.log('drawer is closing')
     setSelectedTrack(null);
     setPlayerVisible(false);
   };
@@ -213,6 +214,7 @@ export default function Home() {
                 key={track.id}
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
+                exit={{ scaleY: 0, opacity: 0 }}
                 transition={{
                   duration: 0.3,
                   delay: 0.2 * track.id,
