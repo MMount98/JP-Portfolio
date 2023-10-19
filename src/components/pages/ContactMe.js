@@ -47,7 +47,7 @@ export default function ContactMe() {
       <div className="grid grid-cols-1 md:grid-cols-1 gap-4 ">
         <div className="card w-full bg-base-100 shadow-xl p-4 ml-0 md:p-8 md:w-3/4 md:ml-48">
           <div className="flex bg-base-300 h-10 rounded-t-lg">
-            {/* ... other components */}
+           
           </div>
           <form ref={form} onSubmit={sendEmail}>
             <div className="rounded-b-lg shadow bg-base-200">
@@ -56,7 +56,7 @@ export default function ContactMe() {
                 <p className="text-base md:text-lg">Send Me a Message!</p>
               </div>
               <div className="grid gap-4 p-4">
-                {/* Name input */}
+              
                 <div className="mt-4">
                   <label className="block mb-2 font-bold text-sm md:text-base">Your Name</label>
                   <Input
@@ -66,7 +66,7 @@ export default function ContactMe() {
                     className="w-full h-10 text-lg pl-2 rounded shadow-xl"
                   />
                 </div>
-                {/* Email input */}
+                
                 <div className="mt-4">
                   <label className="block mb-2 font-bold text-sm md:text-base">Your Email</label>
                   <Input
@@ -76,7 +76,7 @@ export default function ContactMe() {
                     className="w-full h-10 text-lg pl-2 rounded shadow-xl"
                   />
                 </div>
-                {/* Message textarea */}
+                
                 <div>
                   <label className="mb-2 block font-bold text-sm md:text-base">
                     What Can I Help You With?
@@ -88,7 +88,7 @@ export default function ContactMe() {
                     className="w-full text-lg rounded shadow-xl"
                   />
                 </div>
-                {/* Submit button */}
+                
                 <div className="mt-6">
                   {isSubmitting ? (
                     <button disabled>Loading...</button>

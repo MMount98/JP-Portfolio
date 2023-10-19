@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
-import SpotifyWebApi from "spotify-web-api-js";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { PlayIcon } from "@heroicons/react/solid";
 import { XIcon } from "@heroicons/react/outline";
 import AboutMe from "./AboutMe";
 
-const spotifyApi = new SpotifyWebApi();
+
 
 export default function Home() {
   const [hoverd, setHovered] = useState(null);
