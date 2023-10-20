@@ -11,8 +11,8 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="navbar bg-secondary">
-        <div className="flex-1">
+      <div className="navbar bg-gray-500">
+        <div className="flex-1 justify-center md: ml-64">
           <Link to="/" className="btn btn-ghost normal-case text-4xl lg:text-5xl font-custom text-primary bg-gray-500">
             Jacob Paulson
           </Link>
@@ -20,12 +20,12 @@ export default function NavBar() {
 
         <div className="flex-none">
           {/* Desktop Version - Always Display */}
-          <div className="flex mx-3 hidden md:flex"> 
+          <div className="flex mx-3 hidden md:flex "> 
             <a
               href="https://www.instagram.com/_jacobpaulson_/"
               target="_blank"
               rel="noreferrer"
-              className="px-1 "
+              className="instaBtn text-white px-1 "
             >
               <FaInstagram />
             </a>
@@ -33,7 +33,7 @@ export default function NavBar() {
               href="https://www.tiktok.com/@jacobryanpaulson"
               target="_blank"
               rel="noreferrer"
-              className="px-1 "
+              className="tikBtn text-white px-1 "
             >
               <FaTiktok />
             </a>
@@ -41,14 +41,14 @@ export default function NavBar() {
               href="https://twitter.com/JRPaulyStreams"
               target="_blank"
               rel="noreferrer"
-              className="px-1 "
+              className="twitterBtn text-white px-1 "
             >
               <FaTwitter />
             </a>
           </div>
 
           {/* Mobile Version - Dropdown Menu */}
-          <div className="dropdown dropdown-end md:hidden mx-4">
+          <div className="dropdown dropdown-end md:hidden mx-6">
             <button onClick={toggleMenu} className="btn">
               {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>

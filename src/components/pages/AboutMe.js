@@ -40,7 +40,7 @@ export default function AboutMe() {
           animate={inView ? "visible" : "hidden"}
           transition={{ duration: 1 }}
         >
-          <div className="text-base m-5  md:mr-24">
+          <div className="text-base m-8  md:mr-24">
             <p>
               Welcome to my portfolio! I'm Jacob Paulson, a passionate musician,
               producer, and mixing engineer hailing from the vibrant city of
