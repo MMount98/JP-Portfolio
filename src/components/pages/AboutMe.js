@@ -16,7 +16,7 @@ export default function AboutMe() {
   return (
     <>
       <h3 className="text-7xl text-center mb-6 font-custom"> About Me</h3>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col items-center md:flex-row">
         <motion.div
           ref={ref}
           className="place-self-center"
@@ -40,51 +40,15 @@ export default function AboutMe() {
           animate={inView ? "visible" : "hidden"}
           transition={{ duration: 1 }}
         >
-          <div className="text-base m-8  md:mr-24">
+          <div className="text-2xl m-8 md:mr-48">
             <p>
-              Welcome to my portfolio! I'm Jacob Paulson, a passionate musician,
-              producer, and mixing engineer hailing from the vibrant city of
-              Denver. At the age of 24, I have immersed myself in the world of
-              music, dedicating my craft to creating captivating sounds that
-              resonate with audiences.
-            </p>
-            <br></br>
-            <p>
-              With a versatile skill set, I thrive in crafting mesmerizing
-              melodies, producing dynamic music, and creating exciting boundary
-              pushing mixes. My journey in music has been fueled by a deep love
-              for various genres, allowing me to explore a wide spectrum of
-              styles and experiment with unique sonic landscapes.
-            </p>
-            <br></br>
-            <p>
-              Whether I'm composing an emotive score, producing a catchy pop
-              track, or engineering a powerful mix, my goal is always to evoke
-              genuine emotions and create an immersive experience for listeners.
-              Music is a language that transcends boundaries, and I am
-              constantly inspired to push the boundaries of my creativity to
-              bring captivating visions to life.
-            </p>
-            <br></br>
-            <p>
-              This portfolio showcases a selection of my most notable works,
-              highlighting my ability to collaborate with artists, translate
-              their visions into reality, and deliver exceptional results. I
-              believe that every project is an opportunity for growth and
-              exploration, and I approach each one with unwavering dedication
-              and a meticulous attention to detail.
-            </p>
-            <br></br>
-            <p>
-              I invite you to explore my portfolio and immerse yourself in the
-              world of my music. Whether you're an artist seeking a passionate
-              collaborator or someone looking to discover compelling sounds, I'm
-              thrilled to connect and embark on new musical journeys together.
-            </p>
-            <br></br>
-            <p>
-              Thank you for visiting, and I look forward to sharing my passion
-              for music with you.
+              I am a music producer and mixing engineer based out of Providence,
+              Rhode Island. I love making tracks come to life and am open to
+              working on any genre. I specialize in making dynamic and modern
+              glitch pop music. I am happy to be a part of any project at any
+              stage whether I’m taking it from conception to the end or just
+              getting that final polish on a track. Let’s make your vision into
+              a fully realized song!
             </p>
           </div>
         </motion.div>
